@@ -1,17 +1,14 @@
 import React from 'react'
 import styles from "../styles/Home.module.scss"
-import { Header,Footer,Section1,Section2,Section3 } from '@/components'
 function Home() {
   return (
     <>
-    <Header/>
       <main className={styles.main}>
-      <Section1 styles={styles}/>
-      <Section2 styles={styles}/>
-      <Section3 styles={styles}/>
-
-      </main>
-      <Footer/>
+<p>Fraunces 700</p>       
+<p>Fraunces 900</p>       
+<p>Barlow 500</p>       
+<p>Barlow 700</p>       
+       </main>
     </>
   )
 }
