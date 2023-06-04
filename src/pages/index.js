@@ -1,16 +1,33 @@
-import React from 'react'
-import styles from "../styles/Home.module.scss"
+import React from "react";
+import styles from "../styles/Home.module.scss";
+import ExpensesChart from "@/components/expensesChart";
+import Link from "next/link";
 function Home() {
   return (
     <>
       <main className={styles.main}>
-<p>Fraunces 700</p>       
-<p>Fraunces 900</p>       
-<p>Barlow 500</p>       
-<p>Barlow 700</p>       
-       </main>
+        <ExpensesChart />
+        <p className={styles.reference}>
+          Challenge by{" "}
+          <Link
+            target="_blank"
+            href={
+              "https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt"
+            }
+          >
+            Frontend mentor
+          </Link>{" "}
+          coded by{" "}
+          <Link
+            target="_blank"
+            href={"https://www.frontendmentor.io/profile/faisalahmed11"}
+          >
+            Faisal Ahmed
+          </Link>
+        </p>
+      </main>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

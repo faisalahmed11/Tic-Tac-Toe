@@ -1,0 +1,136 @@
+@import "colors";
+.wrapper {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  padding-inline: 1rem;
+}
+.header {
+  background-color: $softRed;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4em 0.89em;
+  border-radius: 0.7rem;
+  align-items: center;
+  color: $vPaleOrange;
+
+  > div {
+    > p:last-of-type {
+      font-weight: 800;
+      font-size: 1.8em;
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.main {
+  background-color: $vPaleOrange;
+  border-radius: 0.7rem;
+  margin-top: 1.34em;
+  padding: 1.8em 1.65em 2.2em;
+  display: grid;
+  gap: 1.79em;
+
+  > h1 {
+    font-size: 1.8em;
+    color: $darkBrown;
+    margin-bottom: -0.4rem;
+  }
+}
+
+.chartsContainer {
+  min-height: 12.3em;
+  display: flex;
+  justify-content: space-between;
+}
+.chart {
+  pointer-events: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  > div[above50="true"] {
+    background-color: $cyan;
+  }
+  > span {
+    color: $cream;
+    background-color: $darkBrown;
+    border-radius: 0.2rem;
+    padding-block: 0.1em;
+    opacity: 0;
+    width: 3.78em;
+
+    text-align: center;
+  }
+  > div {
+    pointer-events: all;
+    background-color: $softRed;
+    width: 2.75em;
+    border-radius: 0.15rem;
+    cursor: pointer;
+  }
+  > p {
+    color: $mediumBrown;
+  }
+}
+.chart:hover,
+.chart:active {
+  > span:first-of-type {
+    opacity: 1;
+  }
+  > div {
+    opacity: 0.8;
+  }
+}
+
+.hr {
+  height: 2px;
+  background-color: $cream;
+}
+.main {
+  > div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    > div:first-of-type {
+      > p:first-of-type {
+        color: $mediumBrown;
+      }
+      > p:last-of-type {
+        font-weight: 800;
+        font-size: 2.6em;
+        color: $darkBrown;
+      }
+    }
+    > div:last-of-type {
+      > p:first-of-type {
+        font-weight: 600;
+      }
+      > p:last-of-type {
+        color: $mediumBrown;
+      }
+    }
+  }
+}
+
+@media screen and (width<600px) {
+  .wrapper {
+    font-size: 15px;
+  }
+  .header {
+    > :last-child {
+      width: 60px;
+      height: auto;
+    }
+  }
+  .chart {
+    > span {
+      width: 3.4em;
+
+      font-size: 0.78rem;
+    }
+    > div {
+      width: 1.8em;
+    }
+  }
+}

@@ -1,6 +1,7 @@
-<!-- # Frontend Mentor - Sunnyside agency landing page solution
+# Frontend Mentor - Expenses chart component solution
 
-This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
 
 ## Table of contents
 
@@ -17,7 +18,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ## Overview
 
-This is my solution to Frontend mentor Sunnyside agency landing page challenge, This page is simple but interactive.
+This is my solution to Frontend mentor  Expenses Chart Component challenge, This is a simple and an interactive challenge.
 
 
 ### Screenshot
@@ -32,7 +33,7 @@ This is my solution to Frontend mentor Sunnyside agency landing page challenge, 
 
 
 ### Links
-- Live Site URL: [https://sunnyside-agency-challengee.vercel.app/](https://sunnyside-agency-challengee.vercel.app/) 
+- Live Site URL: [https://expenses-chart-challengee.vercel.app/](https://expenses-chart-challengee.vercel.app/) 
 
 ### my-process
 With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I handled all the input validation and age calculator function using new Date object; 
@@ -58,4 +59,4 @@ As you know, practice is the only way of getting hands on best practices, theref
 
 ## Acknowledgments
 
-I would like to thank Frontend Mentor Team, for being such an amazing platform and educating millions of students everyday with valuable resources without any cost.  -->
+I would like to thank Frontend Mentor Team, for being such an amazing platform and educating millions of students everyday with valuable resources without any cost. 
