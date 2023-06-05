@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../styles/Home.module.scss";
-import ExpensesChart from "@/components/expensesChart";
 import Link from "next/link";
+import AdviceGenerator from "@/components/adviceGenerator";
 function Home() {
   return (
     <>
       <main className={styles.main}>
-        <ExpensesChart />
+      <AdviceGenerator/>
         <p className={styles.reference}>
           Challenge by{" "}
           <Link

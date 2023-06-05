@@ -5,10 +5,10 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Expenses Chart Component</title>
+        <title>Advice Generator App</title>
         <meta
           name="description"
-          content="This is a challenge based project about a creating Expenses Chart Component given by Frontendmentor"
+          content="This is a challenge based project about a creating Advice Generator App using external API given by Frontendmentor"
         />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />

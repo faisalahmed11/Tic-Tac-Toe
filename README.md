@@ -1,7 +1,6 @@
-# Frontend Mentor - Expenses chart component solution
+# Frontend Mentor - Advice generator app solution
 
-This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -18,7 +17,7 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 
 ## Overview
 
-This is my solution to Frontend mentor  Expenses Chart Component challenge, This is a simple and an interactive challenge.
+This is my solution to Frontend mentor  Advice Generator App using external API, This is a simple and an interactive challenge.
 
 
 ### Screenshot
@@ -33,7 +32,7 @@ This is my solution to Frontend mentor  Expenses Chart Component challenge, This
 
 
 ### Links
-- Live Site URL: [https://expenses-chart-challengee.vercel.app/](https://expenses-chart-challengee.vercel.app/) 
+- Live Site URL: [https://advice-generator-app.vercel.app/](https://advice-generator-app.vercel.app/) 
 
 ### my-process
 With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I handled all the input validation and age calculator function using new Date object; 
