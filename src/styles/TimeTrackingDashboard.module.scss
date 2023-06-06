@@ -1,0 +1,216 @@
+@import "colors";
+
+.wrapper {
+  margin: 5.2rem 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+// User
+.userContainerWrapper {
+  background-color: $darkBlue;
+  border-radius: 1rem;
+}
+.userContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: $blue;
+  padding: 2rem 1.8rem;
+  gap: 1.3rem;
+
+  .userPreName {
+    opacity: 0.6;
+    font-size: 0.9rem;
+  }
+  .userName {
+    font-weight: 300;
+    line-height: 2.2rem;
+  }
+}
+.userImage {
+  border: 3px solid $white;
+  border-radius: 50%;
+  width: 70px;
+  height: auto;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+
+  > button {
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    color: $deSaturatedBlue;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  > button:is([active="true"], :hover) {
+    color: $white;
+  }
+}
+
+// Time Cards
+
+.dataWrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeCardWrapper {
+  border-radius: 1rem;
+  position: relative;
+  padding-top: 2.3rem;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.bgIcon {
+  right: 17px;
+  z-index: -1;
+  position: absolute;
+  width: 78px;
+  height: auto;
+}
+
+.timeCardWrapper[title1="Work"] {
+  background-color: $lightOrange;
+  > .bgIcon {
+    top: -10px;
+  }
+}
+.timeCardWrapper[title1="Play"] {
+  background-color: $softBlue;
+  > .bgIcon {
+    top: -6px;
+  }
+}
+.timeCardWrapper[title1="Study"] {
+  background-color: $lightRed;
+  > .bgIcon {
+    top: -7px;
+  }
+}
+.timeCardWrapper[title1="Exercise"] {
+  background-color: $limeGreen;
+  > .bgIcon {
+    top: 0px;
+  }
+}
+.timeCardWrapper[title1="Social"] {
+  background-color: $violet;
+  > .bgIcon {
+    top: -17px;
+  }
+}
+.timeCardWrapper[title1="Self Care"] {
+  background-color: $softOrange;
+  > .bgIcon {
+    top: -11px;
+    width: 65px;
+  }
+}
+
+.timeCard {
+  cursor: pointer;
+  border-radius: 0.9rem;
+  background-color: $darkBlue;
+  padding: 1.9rem 1.5rem;
+  > :first-child {
+    display: flex;
+    justify-content: space-between;
+    > h2 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .ellipsisIcon {
+      height: 5px;
+      width: auto;
+      cursor: pointer;
+    }
+  }
+  > :last-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.2rem;
+    > :first-child {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    > :last-child {
+      color: $paleBlue;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.timeCard:is(:hover, :active) {
+  background-color: mix($darkBlue, rgb(80, 79, 211), 60%);
+}
+
+// media Queries
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    grid-auto-flow: column;
+  }
+
+  .userContainer {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+    padding-right: 5.8rem;
+
+    .userName {
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      width: min-content;
+    }
+
+    .userImage {
+      width: 85px;
+    }
+  }
+
+  .buttonWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.3rem;
+    > button {
+      font-size: 1.1rem;
+    }
+  }
+
+  .dataWrapper {
+    grid-auto-flow: column;
+    grid-template-rows: min-content min-content;
+    gap: 1rem;
+    align-content: center;
+  }
+
+  .timeCardWrapper {
+    padding-top: 2.8rem;
+  }
+  .timeCard {
+    padding-inline: 2rem;
+    width: min(23vw, 16rem);
+    > :first-child {
+      .ellipsisIcon {
+        height: 4px;
+      }
+    }
+    > :last-child {
+      margin-top: 1.4rem;
+      > :first-child {
+        font-size: 3.4rem;
+        margin-bottom: 0.6rem;
+      }
+      display: block;
+    }
+  }
+}

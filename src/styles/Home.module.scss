@@ -1,20 +1,18 @@
 @import "colors";
 .main{
+    min-height: 100svh;
     display: grid;
     place-items: center;
-    font-family: "Manrope",sans-serif;
-    min-height: 100svh;
-    background-color: $darkBlue;
+    background-color:$veryDarkBlue ;
+    color:$white;
     position: relative;
-
 }
 .reference{
-text-align: center;
     position: absolute;
-    bottom: 5%;
-    color: $lightCyan;
-    padding-inline:1rem;
+    bottom: 2rem;
+    text-align: center;
+    padding-inline: 1rem;
     >*{
-        color: $neonGreen;
+        color: $deSaturatedBlue;
     }
 }

@@ -1,7 +1,6 @@
-# Frontend Mentor - Advice generator app solution
+# Frontend Mentor - Time tracking dashboard solution
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 ## Table of contents
 
 - [Overview](#overview)
@@ -17,14 +16,13 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ## Overview
 
-This is my solution to Frontend mentor  Advice Generator App using external API, This is a simple and an interactive challenge.
+This is my solution to Frontend mentor Time Tracking Dashboard. This is a simple and an interactive challenge.
 
 
 ### Screenshot
 
 ![](./public/1.png)
 ![](./public/2.png)
-![](./public/3.png)
 
 
 
@@ -32,10 +30,10 @@ This is my solution to Frontend mentor  Advice Generator App using external API,
 
 
 ### Links
-- Live Site URL: [https://advice-generator-app.vercel.app/](https://advice-generator-app.vercel.app/) 
+- Live Site URL: [https://time-tracking-dashboard-challengee.vercel.app/](https://time-tracking-dashboard-challengee.vercel.app/) 
 
 ### my-process
-With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I handled all the input validation and age calculator function using new Date object; 
+With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I covered the rest of the project. 
 
 ### what-i-learned
 

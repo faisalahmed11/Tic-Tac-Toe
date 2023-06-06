@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
-import AdviceGenerator from "@/components/adviceGenerator";
+import TimeTrackingDashboard from "@/components/timeTrackingDashboard";
 function Home() {
   return (
     <>
       <main className={styles.main}>
-      <AdviceGenerator/>
+      <TimeTrackingDashboard/>
         <p className={styles.reference}>
           Challenge by{" "}
           <Link
