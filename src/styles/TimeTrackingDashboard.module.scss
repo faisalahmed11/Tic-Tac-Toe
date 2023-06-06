@@ -64,54 +64,36 @@
   border-radius: 1rem;
   position: relative;
   padding-top: 2.3rem;
+  background-size: 78px auto !important;
   isolation: isolate;
   overflow: hidden;
 }
 
-.bgIcon {
-  right: 17px;
-  z-index: -1;
-  position: absolute;
-  width: 78px;
-  height: auto;
-}
-
 .timeCardWrapper[title1="Work"] {
+  background: url("/icon-work.svg") no-repeat top -10px right 17px;
   background-color: $lightOrange;
-  > .bgIcon {
-    top: -10px;
-  }
 }
 .timeCardWrapper[title1="Play"] {
+  background: url("/icon-play.svg") no-repeat top -6px right 17px;
   background-color: $softBlue;
-  > .bgIcon {
-    top: -6px;
-  }
 }
 .timeCardWrapper[title1="Study"] {
+  background: url("/icon-study.svg") no-repeat top -7px right 17px;
   background-color: $lightRed;
-  > .bgIcon {
-    top: -7px;
-  }
 }
 .timeCardWrapper[title1="Exercise"] {
+  background: url("/icon-exercise.svg") no-repeat top 0px right 17px;
   background-color: $limeGreen;
-  > .bgIcon {
-    top: 0px;
-  }
 }
 .timeCardWrapper[title1="Social"] {
+  background: url("/icon-social.svg") no-repeat top -17px right 17px;
   background-color: $violet;
-  > .bgIcon {
-    top: -17px;
-  }
 }
 .timeCardWrapper[title1="Self Care"] {
+  background: url("/icon-self-care.svg") no-repeat top -11px right 17px;
+  background-size: 65px auto !important;
+
   background-color: $softOrange;
-  > .bgIcon {
-    top: -11px;
-    width: 65px;
-  }
 }
 
 .timeCard {

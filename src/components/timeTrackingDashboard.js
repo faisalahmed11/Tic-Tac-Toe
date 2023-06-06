@@ -6,14 +6,6 @@ import data from "../data/data.json";
 function TimeTrackingDashboard() {
   const TimeCard = ({ title, time }) => (
     <div title1={title} className={styles.timeCardWrapper}>
-      <Image
-        className={styles.bgIcon}
-      // {/* ${title.replace(/\s/g, "-")} */}
-        src={`/icon-${title}.svg`}
-        alt=""
-        width={40}
-        height={40}
-      />
       <div className={styles.timeCard}>
         <div>
           <h2 className={styles.timeTitle}>{title}</h2>
