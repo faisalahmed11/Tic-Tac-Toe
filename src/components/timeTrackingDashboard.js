@@ -8,7 +8,8 @@ function TimeTrackingDashboard() {
     <div title1={title} className={styles.timeCardWrapper}>
       <Image
         className={styles.bgIcon}
-        src={`/icon-${title.replace(/\s/g, "-")}.svg`}
+      // {/* ${title.replace(/\s/g, "-")} */}
+        src={`/icon-${title}.svg`}
         alt=""
         width={40}
         height={40}
