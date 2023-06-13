@@ -18,19 +18,6 @@
   width: auto;
   height: 22.2rem;
   position: relative;
-  top: 100%;
-  animation: crewImageAnimation1 0.8s forwards ease-in-out;
-  animation-delay: .3s;
-}
-
-.crewImage[alt="Mark Shuttleworth"] {
-  animation-name: crewImageAnimation2;
-}
-.crewImage[alt="Victor Glover"] {
-  animation-name: crewImageAnimation4;
-}
-.crewImage[alt="Anousheh Ansari"] {
-  animation-name: crewImageAnimation3;
 }
 
 .crewNav {
@@ -59,24 +46,6 @@
 .activeLink:hover {
   animation: activeLinkAnimation 0.5s forwards ease-in-out;
   opacity: 1;
-}
-
-@keyframes activeLinkAnimation {
-  0% {
-    scale: 0.7;
-  }
-  25% {
-    scale: 0.1;
-  }
-  50% {
-    scale: 1.5;
-  }
-  75% {
-    scale: 2;
-  }
-  100% {
-    scale: 1;
-  }
 }
 
 .crewRole {
@@ -121,15 +90,9 @@
 
   .crewImage[alt="Douglas Hurley"] {
     height: 57.4rem;
-    position: relative;
     margin-top: -4.2rem;
-    animation-name: exceptionCrewImageAnimation;
-  }
-
-  @keyframes exceptionCrewImageAnimation {
-    100% {
-      top: 4.2rem;
-    }
+    position: relative;
+    top: 4.2rem;
   }
 
   .article1 {
@@ -157,77 +120,73 @@
     padding-top: 21.2rem;
     padding-inline: 16.65rem;
   }
-.section1{
-  grid-auto-flow: column;
-  max-width: 1440px;
-  width: 100%;
-  justify-content: space-between;
-  margin-inline: auto;
-}
-.crewImageContainer{
-  overflow:visible;
-}
-.crewImage[alt="Douglas Hurley"]{
-height: 71.2rem;
-animation-name: crewImageAnimation4;
-margin: 0;
-}
-.crewImage[alt="Mark Shuttleworth"]{
-height: 65.4rem;
-}
-.crewImage[alt="Victor Glover"]{
-height: 68.1rem;
-}
-.crewImage[alt="Victor Glover"]{
-height: 60.7rem;
-}
+  .section1 {
+    grid-auto-flow: column;
+    max-width: 1440px;
+    width: 100%;
+    justify-content: space-between;
+    margin-inline: auto;
+  }
+  .crewImageContainer {
+  }
+  .crewImage {
+  }
+  .crewImage[alt="Douglas Hurley"] {
+    top: 3rem !important;
+    height: 71.2rem;
+    margin-top: -3rem !important;
+    margin: 0;
+  }
+  .crewImage[alt="Mark Shuttleworth"] {
+    height: 65.4rem;
+  }
+  .crewImage[alt="Victor Glover"] {
+    height: 68.1rem;
+  }
+  .crewImage[alt="Victor Glover"] {
+    height: 60.7rem;
+  }
 
-
-
-
-.article1{
-  text-align: left;
-  order: -1;
-}
-.crewRole{
-  font-size: 3.2rem;
-}
-.crewName{
-font-size: 5.6rem;
-margin-block: 1.5rem 2.7rem;
-}
-.crewBio{
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  max-width: 44.4rem;
-}
-.crewNav{
-justify-self: flex-start;
-margin-top: 12rem;
-margin-bottom:7.1rem ;
-}
+  .article1 {
+    text-align: left;
+    order: -1;
+  }
+  .crewRole {
+    font-size: 3.2rem;
+  }
+  .crewName {
+    font-size: 5.6rem;
+    margin-block: 1.5rem 2.7rem;
+  }
+  .crewBio {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    max-width: 44.4rem;
+  }
+  .crewNav {
+    justify-self: flex-start;
+    margin-top: 12rem;
+    margin-bottom: 7.1rem;
+  }
 }
 
 // keyframes
 
-@keyframes crewImageAnimation1 {
-  100% {
-    top: 0%;
+@keyframes activeLinkAnimation {
+  0% {
+    scale: 0.7;
   }
-}
-@keyframes crewImageAnimation2 {
-  100% {
-    top: 0%;
+  25% {
+    scale: 0.1;
   }
-}
-@keyframes crewImageAnimation3 {
-  100% {
-    top: 0%;
+  50% {
+    scale: 1.5;
   }
-}
-@keyframes crewImageAnimation4 {
+  75% {
+    scale: 2;
+  }
   100% {
-    top: 0%;
+    scale: 1;
   }
 }
