@@ -17,44 +17,18 @@
   width: 17rem;
   height: auto;
   scale: 0.9;
-  animation: imageAnimation1 0.7s forwards ease-in-out;
+  animation: imageAnimation 0.7s forwards ease-in-out;
 }
-.destinationImage[alt="Moon"] {
-  // background-color: red;
-  animation-name: imageAnimation2;
-}
-.destinationImage[alt="Mars"] {
-  animation-name: imageAnimation3;
-}
-.destinationImage[alt="Europa"] {
-  animation-name: imageAnimation4;
-}
+
+
 
 .article1 {
   max-width: 57.3rem;
   margin-inline: auto;
 }
 
-@keyframes imageAnimation1 {
-  100% {
-    scale: 1;
-  }
-}
-@keyframes imageAnimation2 {
-  100% {
-    scale: 1;
-  }
-}
-@keyframes imageAnimation3 {
-  100% {
-    scale: 1;
-  }
-}
-@keyframes imageAnimation4 {
-  100% {
-    scale: 1;
-  }
-}
+
+
 
 .heading {
   font-family: "Barlow Condensed", sans-serif;
@@ -236,5 +210,13 @@
     font-size: 10rem;
     margin-top: 3.7rem;
     margin-bottom: 1.4rem;
+  }
+}
+
+
+// Keyframes
+@keyframes imageAnimation {
+  100% {
+    scale: 1;
   }
 }
