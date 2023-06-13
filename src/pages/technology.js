@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Technology.module.scss";
-
 import { useRouter } from "next/router";
 import Data from "../data/data.json";
 import { Title, TechnologyNavigation } from "@/components";
-
 function Technology() {
   const { name } = useRouter().query;
   const [technology, setTechnology] = useState("Launch vehicle");
@@ -30,7 +28,13 @@ function Technology() {
     <main className={styles.main}>
       <Title preText={"03"} text={" Space Launch 101"} />
       <section className={styles.section1}>
-        <div className={styles.technologyImage} aria-label={data.name} />
+        <img
+        className={styles.technologyImage}
+        src={data.images.landscape}
+        alt="My Image"
+        srcSet={` ${data.images.landscape} 1160w,
+                ${data.images.portrait} 2000w`}
+      />
         <TechnologyNavigation styles={styles} technology={technology} />
         <article className={styles.article1}>
           <p className={styles.preTechnologyName}>The technology...</p>

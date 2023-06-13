@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Space Tourism Website</title>
+        <title>Space Tourism </title>
         <meta
           name="description"
           content="This is a challenge based project about a coding a multipage website, given by Frontendmentor"

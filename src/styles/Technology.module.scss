@@ -9,15 +9,8 @@
 
 .technologyImage {
   width: 100.5%;
+  object-fit: cover;
   aspect-ratio: 16/6.45;
-  background: url("/technology/image-launch-vehicle-landscape.jpg") no-repeat
-    center/contain;
-}
-.technologyImage[aria-label="Spaceport"] {
-  background-image: url("/technology/image-spaceport-landscape.jpg");
-}
-.technologyImage[aria-label="Space capsule"] {
-  background-image: url("/technology/image-space-capsule-landscape.jpg");
 }
 
 .link {
@@ -132,13 +125,6 @@
   .technologyImage {
     width: 51.5rem;
     height: 52.7rem;
-    background-image: url("/technology/image-launch-vehicle-portrait.jpg");
-  }
-  .technologyImage[aria-label="Spaceport"] {
-    background-image: url("/technology/image-Spaceport-portrait.jpg");
-  }
-  .technologyImage[aria-label="Space capsule"] {
-    background-image: url("/technology/image-Space-Capsule-portrait.jpg");
   }
 
   .technologyNav {
