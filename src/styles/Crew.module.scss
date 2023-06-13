@@ -1,0 +1,232 @@
+.main {
+  min-height: 100svh;
+  background: url("/crew/background-crew-mobile.jpg") no-repeat center / cover;
+  text-align: center;
+  padding: 8.8rem 2.4rem 6.8rem;
+}
+.section1 {
+  font-family: "Bellefair", sans-serif;
+}
+.crewImageContainer {
+  display: grid;
+  justify-items: center;
+  border-bottom: 1px solid #383b4b;
+  position: relative;
+  overflow: hidden;
+}
+.crewImage {
+  width: auto;
+  height: 22.2rem;
+  position: relative;
+  top: 100%;
+  animation: crewImageAnimation1 0.7s forwards ease-in-out;
+}
+
+.crewImage[alt="Mark Shuttleworth"] {
+  animation-name: crewImageAnimation2;
+}
+.crewImage[alt="Victor Glover"] {
+  animation-name: crewImageAnimation4;
+}
+.crewImage[alt="Anousheh Ansari"] {
+  animation-name: crewImageAnimation3;
+}
+
+.crewNav {
+  > ul {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+  }
+  margin-block: 3.2rem;
+}
+
+.link {
+  display: block;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  opacity: 0.1744;
+  background-color: white;
+  transition: opacity 0.2s linear;
+}
+.link:hover {
+  opacity: 0.5;
+}
+.activeLink,
+.activeLink:hover {
+  animation: activeLinkAnimation 0.5s forwards ease-in-out;
+  opacity: 1;
+}
+
+@keyframes activeLinkAnimation {
+  0% {
+    scale: 0.7;
+  }
+  25% {
+    scale: 0.1;
+  }
+  50% {
+    scale: 1.5;
+  }
+  75% {
+    scale: 2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.crewRole {
+  text-transform: uppercase;
+  opacity: 0.495;
+}
+
+.crewName {
+  font-size: 2.4rem;
+  margin-block: 0.8rem 1.6rem;
+  text-transform: uppercase;
+}
+.crewBio {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #d0d6f9;
+  max-width: 59.2rem;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    background-image: url("/crew/background-crew-tablet.jpg");
+    padding-inline: 3.9rem;
+    padding-top: 13.6rem;
+    padding-bottom: 0;
+    display: grid;
+  }
+  .section1 {
+    display: grid;
+    align-items: flex-end;
+    margin-top: -5rem;
+  }
+  .crewImageContainer {
+    position: relative;
+    overflow: hidden;
+  }
+  .crewImage {
+    height: 53.2rem;
+  }
+
+  .crewImage[alt="Douglas Hurley"] {
+    height: 57.4rem;
+    position: relative;
+    margin-top: -4.2rem;
+    animation-name: exceptionCrewImageAnimation;
+  }
+
+  @keyframes exceptionCrewImageAnimation {
+    100% {
+      top: 4.2rem;
+    }
+  }
+
+  .article1 {
+    grid-row-start: 1;
+    display: grid;
+  }
+  .crewRole {
+    font-size: 2.4rem;
+  }
+  .crewName {
+    font-size: 4rem;
+  }
+  .crewNav {
+    order: 1;
+  }
+  .crewBio {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .main {
+    background-image: url("/crew/background-crew-desktop.jpg");
+    padding-top: 21.2rem;
+    padding-inline: 16.65rem;
+  }
+.section1{
+  grid-auto-flow: column;
+  max-width: 1440px;
+  width: 100%;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+.crewImageContainer{
+  overflow:visible;
+}
+.crewImage[alt="Douglas Hurley"]{
+height: 71.2rem;
+animation-name: crewImageAnimation4;
+margin: 0;
+}
+.crewImage[alt="Mark Shuttleworth"]{
+height: 65.4rem;
+}
+.crewImage[alt="Victor Glover"]{
+height: 68.1rem;
+}
+.crewImage[alt="Victor Glover"]{
+height: 60.7rem;
+}
+
+
+
+
+.article1{
+  text-align: left;
+  order: -1;
+}
+.crewRole{
+  font-size: 3.2rem;
+}
+.crewName{
+font-size: 5.6rem;
+margin-block: 1.5rem 2.7rem;
+}
+.crewBio{
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  max-width: 44.4rem;
+}
+.crewNav{
+justify-self: flex-start;
+margin-top: 12rem;
+margin-bottom:7.1rem ;
+}
+}
+
+// keyframes
+
+@keyframes crewImageAnimation1 {
+  100% {
+    top: 0%;
+  }
+}
+@keyframes crewImageAnimation2 {
+  100% {
+    top: 0%;
+  }
+}
+@keyframes crewImageAnimation3 {
+  100% {
+    top: 0%;
+  }
+}
+@keyframes crewImageAnimation4 {
+  100% {
+    top: 0%;
+  }
+}

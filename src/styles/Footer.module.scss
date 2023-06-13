@@ -1,0 +1,13 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    margin-inline:auto;
+    inset-inline: 0;
+    text-align: center;
+    background-color: #fff1;
+    padding-block: 1rem 2rem;
+    backdrop-filter: blur(1rem);
+    >p>*{
+        color: #d0d6f9;
+    }
+}

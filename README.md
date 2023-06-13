@@ -1,6 +1,7 @@
-# Frontend Mentor - Time tracking dashboard solution
+# Frontend Mentor - Space tourism website solution
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -16,13 +17,31 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ## Overview
 
-This is my solution to Frontend mentor Time Tracking Dashboard. This is a simple and an interactive challenge.
+This is my solution to Frontend mentor multipage Space tourism website . 
 
 
 ### Screenshot
 
 ![](./public/1.png)
 ![](./public/2.png)
+![](./public/3.png)
+![](./public/4.png)
+
+
+
+
+![](./public/5.png)
+![](./public/6.png)
+![](./public/7.png)
+![](./public/8.png)
+
+
+
+![](./public/9.png)
+![](./public/10.png)
+![](./public/11.png)
+![](./public/12.png)
+
 
 
 
@@ -30,10 +49,12 @@ This is my solution to Frontend mentor Time Tracking Dashboard. This is a simple
 
 
 ### Links
-- Live Site URL: [https://time-tracking-dashboard-challengee.vercel.app/](https://time-tracking-dashboard-challengee.vercel.app/) 
+- Live Site URL: [https://space-tourism-.vercel.app/](https://space-tourism.vercel.app/) 
 
 ### my-process
-With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I covered the rest of the project. 
+With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I covered the rest of the project.
+
+This challenge was more challenging then the rest of others I have done. I had to manage routing and state management, 
 
 ### what-i-learned
 

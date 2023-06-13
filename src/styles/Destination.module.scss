@@ -1,0 +1,240 @@
+.main {
+  min-height: 100svh;
+  background: url("/destination/background-destination-mobile.jpg") no-repeat
+    center / cover;
+  text-align: center;
+  padding: 8.8rem 2.4rem 6.8rem;
+}
+
+.section1 {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.destinationImage {
+  display: block;
+  margin-inline: auto;
+  width: 17rem;
+  height: auto;
+  scale: 0.9;
+  animation: imageAnimation1 0.7s forwards ease-in-out;
+}
+.destinationImage[alt="Moon"] {
+  // background-color: red;
+  animation-name: imageAnimation2;
+}
+.destinationImage[alt="Mars"] {
+  animation-name: imageAnimation3;
+}
+.destinationImage[alt="Europa"] {
+  animation-name: imageAnimation4;
+}
+
+.article1 {
+  max-width: 57.3rem;
+  margin-inline: auto;
+}
+
+@keyframes imageAnimation1 {
+  100% {
+    scale: 1;
+  }
+}
+@keyframes imageAnimation2 {
+  100% {
+    scale: 1;
+  }
+}
+@keyframes imageAnimation3 {
+  100% {
+    scale: 1;
+  }
+}
+@keyframes imageAnimation4 {
+  100% {
+    scale: 1;
+  }
+}
+
+.heading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 100;
+  letter-spacing: 0.27rem;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  > span {
+    font-weight: bold;
+    margin-right: 1.6rem;
+    opacity: 0.4;
+  }
+}
+.destinationNav {
+  margin-block: 2.6rem 2rem;
+  > ul {
+    display: flex;
+    gap: 2.6rem;
+    list-style: none;
+    justify-content: center;
+  }
+}
+.link {
+  position: relative;
+  color: #d0d6f9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.23rem;
+  font-family: "Barlow Condensed", sans-serif;
+  transition: color 0.2s linear;
+}
+
+.link::after {
+  content: "";
+  inset-inline: 0;
+  height: 0.3rem;
+  position: absolute;
+  bottom: -0.8rem;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+  transform-origin: center;
+  background-color: gray;
+}
+.link:hover::after {
+  transform: scaleX(1);
+}
+.activeLink::after {
+  transform: scaleX(1);
+  background-color: white;
+}
+.activeLink {
+  @extend .link;
+  color: white;
+}
+
+.destinationName {
+  font-size: 5.6rem;
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+}
+
+.bodyText {
+  font-size: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 2.5rem;
+  color: #d0d6f9;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+.hr {
+  height: 1px;
+  background-color: #383b4b;
+  margin-block: 3.2rem;
+}
+.statsContainer {
+  text-transform: uppercase;
+  font-family: "Bellefair", sans-serif;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding-top: 3.2rem;
+  margin-top: 3.2rem;
+  border-top: 1px solid #383b4b;
+  p:first-of-type {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.4rem;
+    color: #d0d6f9;
+    letter-spacing: 0.236rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    background-image: url("/destination/background-destination-tablet.jpg");
+    padding-inline: 3.9rem;
+    padding-top: 13.6rem;
+  }
+  .heading {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .destinationImage {
+    width: 30rem;
+  }
+  .destinationNav {
+    > ul {
+      gap: 3.6rem;
+    }
+  }
+  .link {
+    font-size: 1.6rem;
+  }
+  .destinationName {
+    font-size: 8rem;
+  }
+  .bodyText {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+  .statsContainer {
+    margin-top: 4.9rem;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .main {
+    background-image: url("/destination/background-destination-desktop.jpg");
+    padding-top: 21.2rem;
+    padding-inline: 16.65rem;
+    padding-bottom: 12rem;
+  }
+  .heading {
+    font-size: 2.8rem;
+    > span {
+      margin-right: 2.4rem;
+    }
+  }
+  .section1 {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 6.7rem;
+    gap: 10rem;
+  }
+  .destinationNav {
+    > ul {
+      justify-content: flex-start;
+    }
+  }
+  .bodyText {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    max-width: 44.4rem;
+  }
+  .article1 {
+    margin: 0;
+  }
+  .statsContainer {
+    justify-content: flex-start;
+    margin-top: 5.4rem;
+    padding-top: 2.8rem;
+    gap: 7.9rem;
+  }
+
+  .destinationImage {
+    width: 44.5rem;
+    margin-left: 6.2rem;
+  }
+  .destinationName {
+    font-size: 10rem;
+    margin-top: 3.7rem;
+    margin-bottom: 1.4rem;
+  }
+}

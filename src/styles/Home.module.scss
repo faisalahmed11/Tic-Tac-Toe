@@ -1,18 +1,105 @@
-@import "colors";
-.main{
-    min-height: 100svh;
-    display: grid;
-    place-items: center;
-    background-color:$veryDarkBlue ;
-    color:$white;
-    position: relative;
+.main {
+  min-height: 100svh;
+  background: url("/home/background-home-mobile.jpg") no-repeat center / cover;
 }
-.reference{
-    position: absolute;
-    bottom: 2rem;
-    text-align: center;
-    padding-inline: 1rem;
-    >*{
-        color: $deSaturatedBlue;
-    }
+.section1 {
+  text-align: center;
+  padding: 11.2rem 2.4rem 4.8rem;
+  display: grid;
+  gap: 8.1rem;
+  max-width: 1640px;
+  margin-inline:auto;
+}
+.article1 {
+  display: grid;
+  gap: 1.6rem;
+}
+.p1 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.p2 {
+  font-size: 8rem;
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+}
+.p3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #d0d6f9;
+  max-width: 44.4rem;
+  margin-inline: auto;
+}
+
+.explore {
+  border: 0;
+  background-color: white;
+  color: #0b0d17;
+  cursor: pointer;
+  width: 15rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Bellefair", sans-serif;
+  margin: auto;
+  outline: 0px solid transparent;
+  transition: outline 0.15s ease-in-out;
+}
+.explore:hover {
+  outline: 4rem solid #aaa3;
+}
+
+@media screen and (min-width: 700px) {
+  .main {
+    background-image: url("/home/background-home-tablet.jpg");
+  }
+  .section1 {
+    gap: 15.6rem;
+    padding-block: 20.2rem 9rem;
+  }
+  .p1 {
+    font-size: 2rem;
+  }
+  .p2 {
+    font-size: 15rem;
+  }
+  .p3 {
+    font-size: 1.6rem;
+  }
+  .article1 {
+    gap: 2.4rem;
+  }
+  .explore {
+    width: 24.2rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .section1 {
+    display: flex;
+    padding: 38.7rem 16.5rem 13.7rem;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .p1 {
+    font-size: 2.8rem;
+  }
+
+  .p3 {
+    font-size: 1.8rem;
+  }
+  .explore {
+    margin: 0;
+    align-self: flex-end;
+    width: 27.4rem;
+  }
+
+  .main {
+    background-image: url("/home/background-home-desktop.jpg");
+  }
 }
