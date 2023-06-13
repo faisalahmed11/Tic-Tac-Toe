@@ -30,7 +30,7 @@ function Technology() {
     <main className={styles.main}>
       <Title preText={"03"} text={" Space Launch 101"} />
       <section className={styles.section1}>
-        <div className={styles.technologyImage} aria-label={technology} />
+        <div className={styles.technologyImage} aria-label={data.name} />
         <TechnologyNavigation styles={styles} technology={technology} />
         <article className={styles.article1}>
           <p className={styles.preTechnologyName}>The technology...</p>
