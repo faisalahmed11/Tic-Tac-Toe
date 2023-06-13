@@ -19,7 +19,8 @@
   height: 22.2rem;
   position: relative;
   top: 100%;
-  animation: crewImageAnimation1 0.7s forwards ease-in-out;
+  animation: crewImageAnimation1 0.8s forwards ease-in-out;
+  animation-delay: .3s;
 }
 
 .crewImage[alt="Mark Shuttleworth"] {
