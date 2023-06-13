@@ -49,7 +49,7 @@ This is my solution to Frontend mentor multipage Space tourism website .
 
 
 ### Links
-- Live Site URL: [https://space-tourism-.vercel.app/](https://space-tourism.vercel.app/) 
+- Live Site URL: [https://space-tourism-challengee.vercel.app/](https://space-tourism-challengee.vercel.app/) 
 
 ### my-process
 With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I covered the rest of the project.
