@@ -4,11 +4,10 @@ import { Footer } from "@/components";
 function Home() {
   const [turnO, setTurnO] = useState(true);
   const [blockTurns, setBlockTurns] = useState({});
-  const [won, setWon] = useState("");
-  const [wonPattern, setWonPattern] = useState("");
+  const [winPattern, setWinPattern] = useState("");
 
   const handleOnClick = (block) => {
-    if (!blockTurns[block] && !wonPattern) {
+    if (!blockTurns[block] && !winPattern) {
       const updatedBlockTurns = { ...blockTurns, [block]: turnO ? "O" : "X" };
       setBlockTurns(updatedBlockTurns);
       checkWin(updatedBlockTurns[block], updatedBlockTurns);
@@ -16,53 +15,23 @@ function Home() {
     }
   };
   const checkWin = (x, blocks) => {
-    if (blocks.block1 === x && blocks.block2 === x && blocks.block3 === x) {
-      return setWonPattern("1/3");
-    } else if (
-      blocks.block4 === x &&
-      blocks.block5 === x &&
-      blocks.block6 === x
-    ) {
-      return setWonPattern("4/6");
-    } else if (
-      blocks.block7 === x &&
-      blocks.block8 === x &&
-      blocks.block9 === x
-    ) {
-      return setWonPattern("7/9");
-    } else if (
-      blocks.block1 === x &&
-      blocks.block4 === x &&
-      blocks.block7 === x
-    ) {
-      return setWonPattern("1/7");
-    } else if (
-      blocks.block2 === x &&
-      blocks.block5 === x &&
-      blocks.block8 === x
-    ) {
-      return setWonPattern("2/8");
-    } else if (
-      blocks.block1 === x &&
-      blocks.block5 === x &&
-      blocks.block9 === x
-    ) {
-      return setWonPattern("1/9");
-    } else if (
-      blocks.block3 === x &&
-      blocks.block5 === x &&
-      blocks.block7 === x
-    ) {
-      return setWonPattern("3/7");
-    } else if (
-      blocks.block3 === x &&
-      blocks.block6 === x &&
-      blocks.block9 === x
-    ) {
-      return setWonPattern("3/9");
-    } else {
-      return "";
-    }
+    blocks.block1 === x && blocks.block2 === x && blocks.block3 === x
+      ? setWinPattern("1/3")
+      : blocks.block4 === x && blocks.block5 === x && blocks.block6 === x
+      ? setWinPattern("4/6")
+      : blocks.block7 === x && blocks.block8 === x && blocks.block9 === x
+      ? setWinPattern("7/9")
+      : blocks.block1 === x && blocks.block4 === x && blocks.block7 === x
+      ? setWinPattern("1/7")
+      : blocks.block2 === x && blocks.block5 === x && blocks.block8 === x
+      ? setWinPattern("2/8")
+      : blocks.block1 === x && blocks.block5 === x && blocks.block9 === x
+      ? setWinPattern("1/9")
+      : blocks.block3 === x && blocks.block5 === x && blocks.block7 === x
+      ? setWinPattern("3/7")
+      : blocks.block3 === x && blocks.block6 === x && blocks.block9 === x
+      ? setWinPattern("3/9")
+      : "";
   };
 
   return (
@@ -70,7 +39,7 @@ function Home() {
       <div className={styles.wrapper}>
         <h1 className={styles.title}>Tic Tac Toe</h1>
         <h2 className={styles.subTitle}>O / X</h2>
-        <div className={styles.gameBoard} data-win-pattern={wonPattern}>
+        <div className={styles.gameBoard} data-win-pattern={winPattern}>
           {/* game board lines */}
           {[1, 2, 3, 4].map((line) => (
             <div
@@ -99,12 +68,12 @@ function Home() {
         <button
           data-visible={Object.keys(blockTurns).length > 0 ? "true" : "false"}
           className={styles.resetButton}
-          onClick={() => (setBlockTurns({}), setWonPattern(""), setTurnO(true))}
+          onClick={() => (setBlockTurns({}), setWinPattern(""), setTurnO(true))}
         >
-          {!wonPattern?"Reset Game":"Restart Game"}
+          {!winPattern ? "Reset Game" : "Restart Game"}
         </button>
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
