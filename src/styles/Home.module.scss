@@ -1,109 +1,184 @@
+$board-line: 2px;
+$font-size1: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+$font-size2: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+$font-size3: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+$font-size4: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+$font-size5: clamp(2.33rem, calc(1.77rem + 2.81vw), 3.95rem);
+$font-size6: clamp(2.8rem, calc(1.94rem + 4.28vw), 5.26rem);
+
 .main {
-  min-height: 100svh;
-  background: url("/home/background-home-mobile.jpg") no-repeat center / cover;
-}
-.section1 {
+  background-color: #bada55;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   text-align: center;
-  padding: 11.2rem 2.4rem 4.8rem;
-  display: grid;
-  gap: 8.1rem;
-  max-width: 1640px;
-  margin-inline:auto;
+  position: relative;
 }
-.article1 {
-  display: grid;
-  gap: 1.6rem;
-}
-.p1 {
-  font-family: "Barlow Condensed", sans-serif;
+.title,
+.subTitle {
+  padding: 0.5rem;
+  font-family: system-ui, sans-serif;
   text-transform: uppercase;
-  color: #d0d6f9;
+  word-spacing: 1rem;
+  font-size: $font-size4;
 }
-.p2 {
-  font-size: 8rem;
-  font-family: "Bellefair", sans-serif;
-  text-transform: uppercase;
-}
-.p3 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  color: #d0d6f9;
-  max-width: 44.4rem;
-  margin-inline: auto;
+.subTitle {
+  padding: 0;
+  opacity: 0.5;
+  user-select: none;
+  -webkit-user-select: none;
+  font-size: $font-size3;
+  margin-bottom: $font-size6;
 }
 
-.explore {
-  border: 0;
-  background-color: white;
-  color: #0b0d17;
-  cursor: pointer;
-  width: 15rem;
+.gameBoard {
+  width:50vmin;
+  min-width: 250px;
   aspect-ratio: 1;
-  border-radius: 50%;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-family: "Bellefair", sans-serif;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem;
+  position: relative;
+}
+
+.gameBoard::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: red;
+  height: 2px;
   margin: auto;
-  outline: 0px solid transparent;
-  transition: outline 0.15s ease-in-out;
-}
-.explore:hover {
-  outline: 4rem solid #aaa3;
-}
-
-@media screen and (min-width: 700px) {
-  .main {
-    background-image: url("/home/background-home-tablet.jpg");
-  }
-  .section1 {
-    gap: 15.6rem;
-    padding-block: 20.2rem 9rem;
-  }
-  .p1 {
-    font-size: 2rem;
-  }
-  .p2 {
-    font-size: 15rem;
-  }
-  .p3 {
-    font-size: 1.6rem;
-  }
-  .article1 {
-    gap: 2.4rem;
-  }
-  .explore {
-    width: 24.2rem;
-    font-size: 3.2rem;
-  }
+  border-radius: 100%;
+  transform: scale(0);
+  animation: 1s forwards;
+  transform-origin: top;
 }
 
-@media screen and (min-width: 1160px) {
-  .section1 {
-    display: flex;
-    padding: 38.7rem 16.5rem 13.7rem;
-    justify-content: space-between;
-    text-align: left;
-    // background-color: red;
-    // margin-bottom: -4rem;
-  }
+.gameBoard[data-win-pattern="1/9"]::after {
+  rotate: 45deg;
+  animation-name: win-line-animation;
+}
 
-  .p1 {
-    font-size: 2.8rem;
-    letter-spacing: .6rem;
-  }
 
-  .p3 {
-    font-size: 1.8rem;
-    line-height: 3.5rem;
-  }
-  .explore {
-    margin: 0;
-    align-self: flex-end;
-    width: 27.4rem;
-  }
+.gameBoard[data-win-pattern="3/7"]::after {
+  rotate: -45deg;
+  animation-name: win-line-animation;
+  transform-origin: top;
+}
+.gameBoard[data-win-pattern="1/3"]::after {
+  grid-row: 1/2;
+  animation-name: win-line-animation;
+  transform-origin: left;
+}
+.gameBoard[data-win-pattern="4/6"]::after {
+  animation-name: win-line-animation;
+  transform-origin: left;
+}
+.gameBoard[data-win-pattern="7/9"]::after {
+  grid-row: 3/4;
+  animation-name: win-line-animation;
+  transform-origin: left;
+}
+.gameBoard[data-win-pattern="1/7"]::after {
+  grid-column: 1/2;
+  width: 2px;
+  height: auto;
+  animation-name: win-line-animation;
+}
+.gameBoard[data-win-pattern="2/8"]::after {
+  grid-column: 2/3;
+  width: 2px;
+  height: auto;
+  animation-name: win-line-animation;
+}
+.gameBoard[data-win-pattern="3/9"]::after {
+  grid-column: 3/4;
+  width: 2px;
+  height: auto;
+  animation-name: win-line-animation;
+}
 
-  .main {
-    background-image: url("/home/background-home-desktop.jpg");
+.boardLine {
+  background-color: gray;
+  border-radius: 100% /100%;
+  position: absolute;
+  inset: 0;
+  transform:scale(0);
+  animation: win-line-animation 1s forwards ease-in;
+}
+.boardLine1 {
+  grid-column: 1/-1;
+  grid-row: 2 / auto;
+  height: $board-line;
+}
+.boardLine2 {
+  grid-column: 1/-1;
+  grid-row: 3 / auto;
+  height: $board-line;
+}
+.boardLine3 {
+  grid-column: 2 / auto;
+  grid-row: 1/-1;
+  width: $board-line;
+}
+.boardLine4 {
+  grid-column: 3 / auto;
+  grid-row: 1/-1;
+  width: $board-line;
+}
+
+.gameBlock {
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, sans-serif;
+  font-size: $font-size6;
+  opacity: 0;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari */
+}
+
+.gameBlock:hover,
+.gameBlock:focus-visible,
+.gameBlock:active {
+  opacity: 0.3;
+}
+.gameBlock[data-active="true"] {
+  opacity: 1;
+  transition: opacity .2s ease-in;
+}
+
+
+
+.resetButton {
+  font-size: $font-size1;
+  background-color: coral;
+  border: 0;
+  padding: calc($font-size1 - 0.7rem);
+  border-radius: 0.5rem;
+  margin: $font-size4;
+  font-weight: 700;
+  cursor: pointer;
+  visibility: hidden;
+}
+.resetButton[data-visible="true"] {
+  visibility: visible;
+}
+.resetButton:is(:hover, :active) {
+  background-color: transparentize($color: coral, $amount: 0.3);
+}
+
+
+// Keyframes
+@keyframes win-line-animation {
+
+  to {
+    transform: scale(1);
   }
 }

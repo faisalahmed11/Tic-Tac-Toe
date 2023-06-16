@@ -1,6 +1,6 @@
-# Frontend Mentor - Space tourism website solution
+# Tic Tac Toe
+A fun game to play.
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -16,8 +16,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
-
-This is my solution to Frontend mentor multipage Space tourism website . 
+This is simple and a nice looking tic tac toe game, with some animations and basic features.
 
 
 ### Screenshot
@@ -25,41 +24,17 @@ This is my solution to Frontend mentor multipage Space tourism website .
 ![](./public/1.png)
 ![](./public/2.png)
 ![](./public/3.png)
-![](./public/4.png)
-
-
-
-
-![](./public/5.png)
-![](./public/6.png)
-![](./public/7.png)
-![](./public/8.png)
-
-
-
-![](./public/9.png)
-![](./public/10.png)
-![](./public/11.png)
-![](./public/12.png)
-
-
-
-
 
 
 
 ### Links
-- Live Site URL: [https://space-tourism-challengee.vercel.app/](https://space-tourism-challengee.vercel.app/) 
+- Live Site URL: [https://tic-tac-toe.vercel.app/](https://tic-tac-toe.vercel.app/) 
 
 ### my-process
-With Frontend learnings it became possible to complete this project, using HTML , Sass and JS, starting with layout of the app, then with HTML and JS I covered the rest of the project.
-
-This challenge was more challenging then the rest of others I have done. I had to manage routing and state management, 
-
+I have completed this project without using media queries at all and, I have used fluid font types and grid for game-board and I used some absolute lines for board decoration.
 ### what-i-learned
 
-As you know, practice is the only way of getting hands on best practices, therefore as I practice, I learn how to practice more. How to write more clean and optimized code.
-
+I learned how to used absolute elements for decorations and also using fluid font types. and for more or less a test of deep JS along with next.
 ### Built with
 
 - Semantic HTML5 markup
@@ -77,4 +52,4 @@ As you know, practice is the only way of getting hands on best practices, theref
 
 ## Acknowledgments
 
-I would like to thank Frontend Mentor Team, for being such an amazing platform and educating millions of students everyday with valuable resources without any cost. 
+<!-- I would like to thank Frontend Mentor Team, for being such an amazing platform and educating millions of students everyday with valuable resources without any cost.  -->

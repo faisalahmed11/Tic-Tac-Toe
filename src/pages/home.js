@@ -1,25 +1,111 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Home.module.scss";
+import { Footer } from "@/components";
 function Home() {
+  const [turnO, setTurnO] = useState(true);
+  const [blockTurns, setBlockTurns] = useState({});
+  const [won, setWon] = useState("");
+  const [wonPattern, setWonPattern] = useState("");
+
+  const handleOnClick = (block) => {
+    if (!blockTurns[block] && !wonPattern) {
+      const updatedBlockTurns = { ...blockTurns, [block]: turnO ? "O" : "X" };
+      setBlockTurns(updatedBlockTurns);
+      checkWin(updatedBlockTurns[block], updatedBlockTurns);
+      setTurnO((prevTurn) => !prevTurn);
+    }
+  };
+  const checkWin = (x, blocks) => {
+    if (blocks.block1 === x && blocks.block2 === x && blocks.block3 === x) {
+      return setWonPattern("1/3");
+    } else if (
+      blocks.block4 === x &&
+      blocks.block5 === x &&
+      blocks.block6 === x
+    ) {
+      return setWonPattern("4/6");
+    } else if (
+      blocks.block7 === x &&
+      blocks.block8 === x &&
+      blocks.block9 === x
+    ) {
+      return setWonPattern("7/9");
+    } else if (
+      blocks.block1 === x &&
+      blocks.block4 === x &&
+      blocks.block7 === x
+    ) {
+      return setWonPattern("1/7");
+    } else if (
+      blocks.block2 === x &&
+      blocks.block5 === x &&
+      blocks.block8 === x
+    ) {
+      return setWonPattern("2/8");
+    } else if (
+      blocks.block1 === x &&
+      blocks.block5 === x &&
+      blocks.block9 === x
+    ) {
+      return setWonPattern("1/9");
+    } else if (
+      blocks.block3 === x &&
+      blocks.block5 === x &&
+      blocks.block7 === x
+    ) {
+      return setWonPattern("3/7");
+    } else if (
+      blocks.block3 === x &&
+      blocks.block6 === x &&
+      blocks.block9 === x
+    ) {
+      return setWonPattern("3/9");
+    } else {
+      return "";
+    }
+  };
+
   return (
-    <>
-      <main className={styles.main}>
-<section className={styles.section1}>
-<article className={styles.article1}>
-  <p className={styles.p1}>So, you want to travel to </p>
-  <p className={styles.p2}>Space</p>
-  <p className={styles.p3}>{"Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!"}</p>
-</article>
-<button className={styles.explore}>
-  Explore
-</button>
-</section>
+    <main className={styles.main}>
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>Tic Tac Toe</h1>
+        <h2 className={styles.subTitle}>O / X</h2>
+        <div className={styles.gameBoard} data-win-pattern={wonPattern}>
+          {/* game board lines */}
+          {[1, 2, 3, 4].map((line) => (
+            <div
+              key={line}
+              className={`${styles["boardLine" + line]} ${styles.boardLine}`}
+            />
+          ))}
 
+          {/* game blocks */}
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+            <button
+              key={item}
+              onClick={() => handleOnClick("block" + item)}
+              className={`${styles.gameBlock} ${styles["gameBlock" + item]}`}
+              data-active={blockTurns["block" + item] ? "true" : "false"}
+            >
+              {blockTurns["block" + item]
+                ? blockTurns["block" + item]
+                : turnO
+                ? "O"
+                : "X"}
+            </button>
+          ))}
+        </div>
 
-        
-      </main>
-      
-    </>
+        <button
+          data-visible={Object.keys(blockTurns).length > 0 ? "true" : "false"}
+          className={styles.resetButton}
+          onClick={() => (setBlockTurns({}), setWonPattern(""), setTurnO(true))}
+        >
+          {!wonPattern?"Reset Game":"Restart Game"}
+        </button>
+      </div>
+      <Footer/>
+    </main>
   );
 }
 

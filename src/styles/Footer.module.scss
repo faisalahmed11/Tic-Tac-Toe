@@ -1,12 +1,21 @@
 .footer{
     position: absolute;
-    bottom: 0;
-    margin-inline:auto;
-    inset-inline: 0;
-    text-align: center;
-    padding-block: 1rem 2rem;
-    backdrop-filter: blur(.5rem);
+    bottom: 1rem;
+    // right: 0;
+    // margin-inline:auto;
+    // inset: 0;
+    // display: grid;
+    // align-items:last baseline;
+    // justify-content: center;
+
+    // margin-top: auto;
+    // text-align: center;
+    // background-color: transparent;
+    // margin-top: auto;
+    // padding-block: 1rem ;
+    // backdrop-filter: blur(.5rem);
     >p>*{
-        color: #d0d6f9;
+        margin-top: auto;
+        color:firebrick;
     }
 }

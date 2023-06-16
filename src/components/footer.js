@@ -6,7 +6,7 @@ function Footer() {
    <footer className={styles.footer}>
    <p className={styles.reference}>
 
-          Challenge by{" "}
+          {/* Challenge by{" "}
           <Link
             target="_blank"
             href={
@@ -14,11 +14,11 @@ function Footer() {
             }
           >
             Frontend mentor
-          </Link>{" "}
-          coded by{" "}
+          </Link>{" "} */}
+           Coded by{" "}
           <Link
             target="_blank"
-            href={"https://www.frontendmentor.io/profile/faisalahmed11"}
+            href={"https://www.github.com/faisalahmed11"}
           >
             Faisal Ahmed
           </Link>
