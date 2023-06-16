@@ -28,7 +28,7 @@ This is simple and a nice looking tic tac toe game, with some animations and bas
 
 
 ### Links
-- Live Site URL: [https://tic-tac-toe.vercel.app/](https://tic-tac-toe.vercel.app/) 
+- Live Site URL: [https://tic-tac-toe.vercel-challenge.app/](https://tic-tac-toe-challege.vercel.app/) 
 
 ### my-process
 I have completed this project without using media queries at all and, I have used fluid font types and grid for game-board and I used some absolute lines for board decoration.
